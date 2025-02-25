@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/89891c1b68.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- --------------------main headers section----------------- -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo4.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h1>hello! I'm <span>Biroj Lal Shrestha</span><br>From Nepal.</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- --------------------about section----------------- -->
+    <div id="about">
+
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/profile.jpg" alt="profile picture">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>Hi, it's Biroz Shrestha here!<br>
+                        I studied Computer Science during my +2 at NCCS and<br>
+                        am currently in my 8th semester at NCCS, pursuing my Bachelor's degree.<br><br>
+                        
+                        I'm an intern at Mata Technology Company, where I'm sharpening my skills and gaining hands-on experience in software development.
+                        <br><br>
+                        🌟 My Goals<br>
+                        I'm passionate about becoming a Backend Developer, with a current focus on mastering PHP.
+                        In the future, I aim to explore and learn other valuable tools and technologies to enhance my skill set further.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Educations</p>
+                    </div>
+                    <!-- skills -->
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Development</span><br>Wed development using HTML, CSS, JavaScript, PHP, and MySQL.</li>
+                            <li><span>Web Design</span><br>Design new website using Figma and Adobe Photoshop </li>
+                            <li><span>Programming Languages</span><br>well -versed in PHP, JavaScript, Java, Python and HTML/CSS.</li>
+                            <li><span>Database Management</span><br>well -versed in Data Management using MySQL and Nginx.</li>
+                            <li><span>Data Analysis</span><br>Analysis data using Python (Pandas, NumPy) and Excel</li>
+                        </ul>
+                    </div>
+                    <!-- Experience -->
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Current</span><br>Internship at Matat Technologies.</li>
+                            <li><span>Hackathon</span><br>Developed a parking space locater/Indecator using PHP,Mongodb and HTML/Javascripts.</li>
+                            <li><span>Academic Project No.2</span><br>Room Booking Website- A well designed and fully
+                                functioning room booking website using CRUD operation and
+                                JavaScript </li>
+                            <li><span>Academic Project No.1</span><br>E-Commerce Website - A functional e-commerce site
+                                developed using the basic CRUD operations.</li>
+                        </ul>
+                    </div>
+                    <!-- Education -->
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2025</span><br>Expected Graduation Date</li>
+                            <li><span>2021-Present</span><br>BIM from National College of Computer Studies</li>
+                            <li><span>2018-2020</span><br>Higher Secondary Education from Nccs Secondary School </li>
+                            <li><span>2006-2018</span><br>Secondary Education from Bright Heaven Boarding School</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- --------------------service section----------------- -->
+     <div id="services">
+
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-pen-ruler"></i>
+                    <h2>Frontend Development</h2>
+                    <p>
+                        I create visually appealing, responsive, and interactive websites 
+                        using HTML, CSS, and JavaScript. My focus is on delivering smooth user
+                        experiences with clean, maintainable code and modern design practices.
+                    </p>
+                    <a href="#">Learn more..</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Backend Development</h2>
+                    <p>
+                        I develop dynamic and secure backend systems using PHP, ensuring seamless functionality,
+                        optimized performance, and scalability. Whether it's API development or server-side logic,
+                        I build solutions tailored to your needs.
+                    </p>
+                    <a href="#">Learn more..</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-database"></i>
+                    <h2>Database Management</h2>
+                    <p>
+                        I design, optimize, and manage databases using MySQL and Nginx, ensuring efficient data storage,
+                        fast retrieval, and secure access. My approach focuses on performance tuning and maintaining data
+                        integrity for web applications.
+                    </p>
+                    <a href="#">Learn more..</a>
+                </div>
+            </div>
+
+        </div>
+
+     </div>
+
+    <!-- --------------------portfolio section----------------- -->
+    <div id="portfolio">
+
+        <div class="container">
+            <h1 class="sub-title">My Works</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/project1.png" alt="">
+                    <div class="layer">
+                        <h3>Tulsi Lumbini Guest House Website</h3>
+                        <p>A room booking website designed for seamless reservations and guest management.
+                            It features an intuitive interface for browsing available rooms, making bookings,
+                            and handling reservations efficiently.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="images/project2.png" alt="">
+                    <div class="layer">
+                        <h3>Tours Website</h3>
+                        <p>A web page showcasing various tour destinations with detailed descriptions, images, and
+                            travel information to help users explore and plan their next adventure.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="images/project3.png" alt="">
+                    <div class="layer">
+                        <h3>Kalki Website for Appointment</h3>
+                        <p>An appointment booking website designed for seamless scheduling and management. It provides 
+                            users with an easy-to-use interface to book, track, and manage their appointments efficiently.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See More</a>
+        </div>
+        
+    </div>
+
+    <!-- --------------------contact section----------------- -->
+     <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">My Contact</h1>
+                    <p></p>
+                </div>
+
+                <div class="contact-right"></div>
+            </div>
+        </div>
+     </div>
+
+
+
+
+
+
+
+<script>
+    
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+        for(tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+
+
+</script>
+
+</body>
+</html>
