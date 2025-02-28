@@ -6,6 +6,7 @@
     <title>Personal Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/89891c1b68.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
 
@@ -267,6 +268,29 @@
     .catch(error => console.error('Error!', error.message))
     })
 </script>
+
+<!-- move to top -->
+ <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let scrollTopBtn = document.createElement("button");
+        scrollTopBtn.id = "scrollTopBtn";
+        scrollTopBtn.innerHTML = "⬆";
+        document.body.appendChild(scrollTopBtn);
+    
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 300) {
+                scrollTopBtn.style.display = "flex";
+            } else {
+                scrollTopBtn.style.display = "none";
+            }
+        });
+    
+        scrollTopBtn.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    });
+    
+ </script>
 
 </body>
 </html>
