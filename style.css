@@ -1,3 +1,6 @@
+/* Frontend Service Page Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -31,14 +34,14 @@ nav{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.8); /* Slight transparency */
-        padding: 15px 10%;
-        z-index: 1000;
-        transition: background 0.3s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 1); /* Slight transparency */
+    padding: 8px 10%;
+    z-index: 1000;
+    transition: background 0.3s;
  
 }
 
@@ -361,9 +364,13 @@ form input, form textarea{
     transform: translateY(-5px);
 }
 
-.btn.btn2{
+.btn2{
     display: inline-block;
     background: #ff004f;
+}
+
+.btn2:hover {
+    background: #f56f99; /* Lighter red */
 }
 
 .copyright{
@@ -378,6 +385,8 @@ form input, form textarea{
 .copyright i{
     color: #ff004f;
 }
+
+
 
 /* ----------------------css for smaller screens--------------------- */
 nav .fa-solid{
