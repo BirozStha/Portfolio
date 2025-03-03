@@ -178,10 +178,6 @@ body {
 }
 
 
-.btn:hover {
-    background: #7e082d94;
-}
-
 .btn {
     display: inline-block;
     margin-top: 20px;
@@ -221,52 +217,54 @@ body {
     background: #f56f99;
 }
 
-/* ------css for smaller device----------- */
+/*------------------------- Responsive Styles -------------------------*/
+
 @media (max-width: 768px) {
+    .container {
+        padding: 10px 5%;
+    }
+
     .container h1 {
-        font-size: 35px;
+        font-size: 40px;
     }
 
-    /* Center align text for better readability */
+    .service-card h2 {
+        font-size: 40px;
+    }
+
+    .service-card h3 {
+        font-size: 25px;
+    }
+
     .service-card p {
-        font-size: 14px;
-        text-align: center;
+        font-size: 16px;
     }
 
-    /* Stack tools in a single column */
+    .service-card ul li::before {
+        font-size: 18px;
+    }
+
     .tools-container {
-        flex-direction: column;
-        align-items: center;
+        justify-content: center;
+        gap: 10px;
     }
 
     .tool-card {
-        width: 100%; /* Full width on mobile */
+        width: 45%; /* Increase width to fit in two cards per row */
     }
 
-    /* Stack images in a single column */
     .sample-work {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Stack the images vertically */
     }
 
     .sample-work img {
-        width: 100%; /* Full width */
+        width: 100%; /* Make images full width */
+        margin-bottom: 20px; /* Adds spacing between stacked images */
     }
 
-    /* Make buttons full width */
-    .btn, .btn2 {
-        width: 100%;
-        text-align: center;
-
+    .title-image {
+        max-width: 100%; /* Ensure title image is responsive */
     }
-
-    .fixed-home {
-        bottom: 0px;
-        right: 10px;
-        padding: 8px 15px;
-
-    }
-    
 }
 
 
