@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://kit.fontawesome.com/89891c1b68.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -182,8 +181,67 @@
                         <a href="mywork/kalkiautomation.htm"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
+
+
+                <!-- Hidden projects -->
+                <div class="work hidden">
+                    <img src="images/project3.png" alt="">
+                    <div class="layer">
+                        <h3>Project 4</h3>
+                        <p>Details about project 4.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="work hidden">
+                    <img src="images/project3.png" alt="">
+                    <div class="layer">
+                        <h3>Project 5</h3>
+                        <p>Details about project 5.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="work hidden">
+                    <img src="images/project3.png" alt="">
+                    <div class="layer">
+                        <h3>Project 6</h3>
+                        <p>Details about project 6.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="work hidden">
+                    <img src="images/project3.png" alt="">
+                    <div class="layer">
+                        <h3>Project 7</h3>
+                        <p>Details about project 7.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="work hidden">
+                    <img src="images/project3.png" alt="">
+                    <div class="layer">
+                        <h3>Project 8</h3>
+                        <p>Details about project 8.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="work hidden">
+                    <img src="images/project3.png" alt="">
+                    <div class="layer">
+                        <h3>Project 9</h3>
+                        <p>Details about project 9.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
             </div>
-            <a href="#" class="btn">See More</a>
+            <!-- <a href="#portfolio" class="btn" onclick="toggleProjects()">See More</a> -->
+            <!-- <button id="seeMoreBtn" class="btn" onclick="toggleProjects()">See More</button> -->
+            <button id="seeMoreBtn" class="btn">See More</button>
         </div>
         
     </div>
@@ -283,7 +341,7 @@
 </script>
 
 <!-- move to top -->
- <script>
+<script>
     document.addEventListener("DOMContentLoaded", function () {
         let scrollTopBtn = document.createElement("button");
         scrollTopBtn.id = "scrollTopBtn";
@@ -303,10 +361,65 @@
         });
     });
     
- </script>
+</script>
 
- <script>
-    
- </script>
+<!-- for icon -->
+<script src="https://kit.fontawesome.com/89891c1b68.js" crossorigin="anonymous"></script>
+
+
+<!-- My work section ko see more working  -->
+<script>
+    let visibleCount = 3; // Initially show 3 projects
+    const works = document.querySelectorAll(".work"); // Select all work elements
+    const seeMoreBtn = document.getElementById("seeMoreBtn");
+    const portfolioSection = document.getElementById("portfolio"); 
+
+    // Initially hide all projects except the first 3
+    for (let i = 3; i < works.length; i++) {
+        works[i].classList.add("hidden");
+    }
+
+    function toggleProjects() {
+        if (seeMoreBtn.innerText === "See More") {
+            // Show the next 3 projects
+            let newCount = visibleCount + 3;
+            let firstNewProject = null;
+            for (let i = visibleCount; i < newCount; i++) {
+                if (works[i]) {
+                    works[i].classList.remove("hidden");
+
+                    // Capture the first newly shown project
+                    if (!firstNewProject) {
+                        firstNewProject = works[i];
+                    }
+                }
+            }
+            visibleCount = newCount;
+
+            // Scroll to the first newly revealed project
+            if (firstNewProject) {
+                firstNewProject.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+
+            // If all projects are visible, change the button text to "See Less"
+            if (visibleCount >= works.length) {
+                seeMoreBtn.innerText = "See Less";
+            }
+        } else {
+            // Hide all projects except the first 3
+            for (let i = 3; i < works.length; i++) {
+                works[i].classList.add("hidden");
+            }
+            visibleCount = 3; // Reset the visible count
+            seeMoreBtn.innerText = "See More"; // Change button text back to "See More"
+
+            portfolioSection.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+    }
+
+    // Add event listener to the button
+    seeMoreBtn.addEventListener("click", toggleProjects);
+</script>
+
 </body>
 </html>
