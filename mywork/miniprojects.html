@@ -1,0 +1,182 @@
+<!-- Kalki Automation Project Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Projects & Pratice Code</title>
+    <link rel="stylesheet" href="../css/mywork.css">
+    <script src="https://kit.fontawesome.com/89891c1b68.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Mini Projects & Pratice Code</h1>
+
+        <!-- the incdicator or path (like how to got here) -->
+        <div class="indicator">
+            <a href="../index.html">HOME</a>
+            <span> > </span>
+        <a href="#">MINI PROJECTS & PRACTICE CODE</a>
+        </div>
+
+        <img src="../images/Kalki/home1.png" alt="mini project main img">
+        <p>
+            Mini Project is a collection of small, practical coding exercises designed 
+            to enhance HTML, CSS, JavaScript, and general web development skills. 
+            Each project is lightweight, time-efficient, and focuses on improving coding 
+            logic, UI design, and interactive functionality.<br><br>
+
+            Whether you're experimenting with frontend layouts, building interactive 
+            components, or testing backend logic, this repository serves as a hub for 
+            quick and effective practice. Perfect for developers looking to sharpen 
+            their skills, explore new ideas, and create reusable code snippets.
+        </p>
+        <br><br>
+        
+        <h2>Key Features</h2>
+        <ul>
+            <li> Small, time-efficient projects</li>
+            <li>HTML, CSS, JavaScript, and more</li>
+            <li>Interactive UI components</li>
+            <li>Backend logic and utilities</li>
+            <li>Great for learning and experimentation</li>
+        </ul>
+
+        <h2>Tools Used</h2>
+        <div class="tools-container">
+            <div class="tool-card">
+                <i class="fab fa-html5"></i>
+                <p>HTML</p>
+            </div>
+            <div class="tool-card">
+                <i class="fab fa-css3-alt"></i> <!-- CSS icon from FontAwesome -->
+                <p>CSS</p>
+            </div>
+            <div class="tool-card">
+                <i class="fab fa-js"></i> <!-- JavaScript icon from FontAwesome -->
+                <p>JavaScript</p>
+            </div>
+        </div>
+        <br><br>
+
+        <h2 id="toc">List Of the Mini-Projects</h2>
+        <p id="note">Note: (using the to "Back to List" to return back to the list/here)</p>
+        <ul>
+            <li><a href="#cal">Project 1: Calculator</a></li>
+            <li><a href="#todo">Project 2: To-Do List </a></li>
+        </ul>
+        <br><br>
+
+        <!-- gallery -->
+        <h2>All Mini Projects detailed images</h2>
+        <br>
+        <!-- Calculator -->
+        <h3 id="cal">Calculator</h3>
+        <p id="shortdes">
+            A clean, responsive calculator built with HTML, CSS, and JavaScript that 
+            performs basic arithmetic operations (addition, subtraction, multiplication, division) 
+            with real-time display and error handling.
+        </p>
+        <div class="image-container">
+            <div class="image-box">
+                <img src="../images/MiniProjects/Calculator/Calculator 1.png" alt="Calculator example image 1" onclick="openLightbox(this)">
+            </div>
+            <div class="image-box">
+                <img src="../images/MiniProjects/Calculator/Calculator 2.png" alt="Calculator example image 2" onclick="openLightbox(this)">
+            </div>
+        </div>
+        <br>
+        <br>
+
+        <!-- To-Do List  -->
+        <h3 id="todo">To-Do List</h3>
+        <p id="shortdes">
+            A dynamic to-do list app built with HTML, CSS, and JavaScript. Features task creation/deletion, 
+            LocalStorage persistence, and a responsive design. Perfect for daily task tracking with intuitive controls.
+            <br>
+            It also has light and dark mode the first image is light and second image is dark mode.
+        </p>
+        <div class="image-container">
+            <div class="image-box">
+                <img src="../images/MiniProjects/ToDoList/todolist1.png" alt="To-Do List Example image 1" onclick="openLightbox(this)">
+            </div>
+            <div class="image-box">
+                <img src="../images/MiniProjects/ToDoList/todolist2.png" alt="To-Do List Example image 2" onclick="openLightbox(this)">
+            </div>
+        </div>
+        <br>
+        <br>
+
+        <div class="bottom-section">
+            <a href="../index.html#contact" class="btn btn2">Contact</a>
+        </div>
+        <a href="../index.html#portfolio" class="btn fixed-home">Back to Home</a>
+        <!-- <a href="#toc" class="btn fixed-home">Back to Home</a> -->
+
+
+        <!-- Lightbox -->
+        <div id="lightbox">
+            <span id="close-lightbox" onclick="closeLightbox()">×</span>
+            <img id="lightbox-img" src="" alt="Full Image">
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let scrollTopBtn = document.createElement("button");
+            scrollTopBtn.id = "scrollTopBtn";
+            scrollTopBtn.innerHTML = "Back to List";
+            document.body.appendChild(scrollTopBtn);
+        
+            // Get the ToC element
+            let tocElement = document.getElementById("toc");
+            let tocPosition = tocElement.getBoundingClientRect().top + window.scrollY;
+        
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > tocPosition) {
+                    scrollTopBtn.style.display = "flex";
+                } else {
+                    scrollTopBtn.style.display = "none";
+                }
+            });
+        
+            scrollTopBtn.addEventListener("click", function () {
+                if (tocElement) {
+                    tocElement.scrollIntoView({ behavior: "smooth" });
+                } else {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                }
+            });
+        });        
+    </script>
+
+    <script>
+        function openLightbox(img) {
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImg = document.getElementById("lightbox-img");
+            lightboxImg.src = img.src; 
+            lightbox.classList.add("show");
+
+            const scrollTopBtn = document.getElementById("scrollTopBtn");
+            scrollTopBtn.style.display = "none"; // Hide button when lightbox opens
+        }
+        
+        function closeLightbox() {
+            document.getElementById("lightbox").classList.remove("show");
+
+            const scrollTopBtn = document.getElementById("scrollTopBtn");
+            scrollTopBtn.style.display = "flex"; // Show button again when lightbox closes
+        }
+        
+        // Close lightbox when clicking outside the image
+        document.getElementById("lightbox").addEventListener("click", function (event) {
+            if (event.target === this) {
+                closeLightbox();
+            }
+        });
+        
+    </script>
+</body>
+</html>
