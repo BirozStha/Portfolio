@@ -179,6 +179,28 @@ html {
     padding-bottom: 5px;
 }
 
+#lister{
+    font-size: 20px;
+    font-weight: 300px;
+    margin-top: 20px;
+    display: inline-block;
+    border-bottom: 2px solid #ff004f; /* Change color as needed */
+    padding-bottom: 5px;
+}
+
+h4{
+    font-size: 19px;
+    font-weight: 200px;
+    display: inline-block;
+    border-bottom: 2px solid #ff004f; /* Change color as needed */
+    padding-bottom: 5px;
+}
+
+.mini{
+    padding-left: 30px;
+    padding-right: 25px;
+}
+
 /* gallery images */
 .image-container {
     display: grid;
@@ -279,6 +301,10 @@ html {
 
 #shortdes{
     margin-top: 10px;
+}
+
+#hov li a:hover{
+    color: #ff004f;
 }
 
 /*---------------- Responsive Styles ---------------- */
